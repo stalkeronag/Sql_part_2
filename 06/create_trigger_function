@@ -1,0 +1,13 @@
+CREATE OR REPLACE FUNCTION create_inherited_table()
+RETURNS TRIGGER AS $$
+declare 
+ division_key text;
+ table_name text;
+begin
+	division_key := EXTRACT(YEAR FROM NEW.data);	
+	table_name := concat('inherited_table_',division_key);
+    EXECUTE format('CREATE TABLE IF NOT EXISTS %s (LIKE master_table INCLUDING ALL ) INHERITS (master_table)', table_name);
+    EXECUTE 'INSERT INTO ' || table_name || ' SELECT ($1).*' USING NEW;
+    RETURN null;
+END;
+$$ LANGUAGE plpgsql;

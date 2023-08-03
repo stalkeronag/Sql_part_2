@@ -1,0 +1,25 @@
+create table college
+(
+    id bigint primary key ,
+    name varchar not null ,
+    size integer not null  default 100
+);
+insert into college(id, name, size) values (10, 'КФУ',50000);
+insert into college(id, name, size) values (20, 'МГУ',38000);
+insert into college(id, name, size) values (30, 'МФТИ',7000);
+insert into college(id, name, size) values (40, 'Иннополис',1077);
+insert into college(id, name, size) values (50, 'Сколково',1070);
+create table student
+(
+    id bigint primary key ,
+    city varchar not null ,
+    name varchar not null ,
+    telegram_contact varchar not null,
+    college_id bigint not null,
+    constraint fk_college_id foreign key (college_id) references college(id)
+);
+insert into student(id, city, name, telegram_contact, college_id) values (10, 'Казань','Иван Иванов','@ivanov1991',10);
+insert into student(id, city, name, telegram_contact, college_id) values (20, 'Москва','Екатерина Андреева','@kate_',20);
+insert into student(id, city, name, telegram_contact, college_id) values (30, 'Новосибирск','Анна Потапова','@apotap',30);
+insert into student(id, city, name, telegram_contact, college_id) values (40, 'Казань','Ильяс Мухаметшин','@ilyas',40);
+insert into student(id, city, name, telegram_contact, college_id) values (50, 'Москва','Сергей Петров','@spetrov',50);

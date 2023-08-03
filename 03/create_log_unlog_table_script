@@ -1,0 +1,10 @@
+create table logged_table 
+(
+  text varchar(50)
+);
+alter table logged_table set logged;
+create table unlogged_table
+(
+	text varchar(50)
+);
+alter table unlogged_table set unlogged

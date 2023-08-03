@@ -1,0 +1,10 @@
+create or replace FUNCTION mul_complex_numbers(a complex_number, b complex_number) 
+RETURNS complex_number AS $$
+DECLARE
+    result_complex complex_number;
+BEGIN
+    result_complex.real_part := (a.real_part * b.real_part) - (a.imaginary_part * b.imaginary_part);
+    result_complex.imaginary_part := (a.real_part * b.imaginary_part) + (a.imaginary_part * b.real_part);
+    RETURN result_complex;
+END;
+$$ LANGUAGE plpgsql;

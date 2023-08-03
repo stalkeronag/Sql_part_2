@@ -1,0 +1,4 @@
+CREATE TABLE numbers (
+    id bigint PRIMARY KEY,
+    complex complex_number
+);

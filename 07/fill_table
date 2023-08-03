@@ -1,0 +1,4 @@
+INSERT INTO numbers(id, complex) values
+(2, (1, 2)::complex_number),
+(3, (3, 4)::complex_number),
+(4, (-2, 1)::complex_number);

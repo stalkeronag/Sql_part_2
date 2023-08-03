@@ -1,0 +1,8 @@
+INSERT INTO table_50 (id, value)
+SELECT generate_series(1, 10000), repeat('a', 50);
+INSERT INTO table_75 (id, value)
+SELECT generate_series(1, 10000), repeat('a', 50);
+INSERT INTO table_90 (id, value)
+SELECT generate_series(1, 10000), repeat('a', 50);
+INSERT INTO table_100 (id, value)
+SELECT generate_series(1, 10000), repeat('a', 50);

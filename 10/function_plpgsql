@@ -1,0 +1,10 @@
+create or replace  function get_single_row(in filter bigint) 
+  RETURNS  RECORD AS $$
+DECLARE
+  result_row RECORD;
+BEGIN
+ EXECUTE 
+    format('SELECT * FROM student WHERE id = %s LIMIT 1',filter) INTO result_row;
+  return result_row;
+END;
+$$ LANGUAGE plpgsql;

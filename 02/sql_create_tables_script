@@ -1,0 +1,4 @@
+CREATE TABLE table_50 (id integer, value varchar(100)) WITH (FILLFACTOR = 50);
+CREATE TABLE table_75 (id integer, value varchar(100)) WITH (FILLFACTOR = 75);
+CREATE TABLE table_90 (id integer, value varchar(100)) WITH (FILLFACTOR = 90);
+CREATE TABLE table_100 (id integer, value varchar(100)) WITH (FILLFACTOR = 100);

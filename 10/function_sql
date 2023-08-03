@@ -1,0 +1,4 @@
+create or replace  function get_single_row_sql(in filter bigint) 
+RETURNS setof record  AS $$
+     SELECT * from student where id = filter;
+$$ LANGUAGE SQL;

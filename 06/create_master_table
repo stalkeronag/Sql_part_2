@@ -1,0 +1,4 @@
+CREATE TABLE master_table (
+    id bigint primary key,
+    data date
+);

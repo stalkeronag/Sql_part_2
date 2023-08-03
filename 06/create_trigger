@@ -1,0 +1,4 @@
+create or replace TRIGGER create_inherited_table_trigger
+BEFORE INSERT ON master_table
+FOR EACH ROW
+EXECUTE FUNCTION create_inherited_table();

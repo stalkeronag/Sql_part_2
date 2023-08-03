@@ -1,0 +1,4 @@
+select min(A) OVER(PARTITION BY B,C ORDER BY B,C)
+    FROM my_table mt
+ WHERE A = 556
+ ORDER BY C,B

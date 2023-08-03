@@ -1,0 +1,5 @@
+insert into master_table(id, data)
+SELECT 
+	*,
+	to_date(floor(random()*30 + 1992) || '-' || floor(random()*13) || '-' || floor(random()*28), 'YYYY-MM-DD') 
+FROM generate_series(1, 1000000);

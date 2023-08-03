@@ -1,0 +1,4 @@
+SELECT relname, reltuples AS row_count
+FROM pg_class
+WHERE relkind = 'r' AND relname LIKE 'inherited_table_%'
+ORDER BY relname;

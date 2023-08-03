@@ -1,0 +1,9 @@
+create or replace function sub_complex_numbers(a complex_number, b complex_number) returns complex_number as $$
+declare 
+ result_complex complex_number;
+begin 
+	result_complex.real_part := a.real_part - b.real_part;
+	result_complex.imaginary_part := a.imaginary_part - b.imaginary_part;
+	return result_complex;
+end
+$$ LANGUAGE plpgsql;

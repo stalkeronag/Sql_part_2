@@ -1,0 +1,5 @@
+create or replace AGGREGATE sum_complex_numbers(complex_number) (
+    sfunc = add_complex_numbers,
+    stype = complex_number,
+    initcond = '(0,0)'
+);

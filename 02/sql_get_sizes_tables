@@ -1,0 +1,4 @@
+SELECT pg_size_pretty(pg_total_relation_size('table_50')) AS size_50,
+       pg_size_pretty(pg_total_relation_size('table_75')) AS size_75,
+       pg_size_pretty(pg_total_relation_size('table_90')) AS size_90,
+       pg_size_pretty(pg_total_relation_size('table_100')) AS size_100;
